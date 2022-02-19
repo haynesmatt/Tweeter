@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginViewController-->
         <scene sceneID="Fbd-Z0-5hY">
             <objects>
-                <viewController id="jvL-mJ-bfU" sceneMemberID="viewController">
+                <viewController title="LoginViewController" id="jvL-mJ-bfU" customClass="LoginViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oQV-4G-M9c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,6 +23,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="large">
                                     <color key="baseBackgroundColor" red="0.1139131561" green="0.63070619110000004" blue="0.94788545369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onLoginButton:" destination="jvL-mJ-bfU" eventType="touchUpInside" id="OKg-3h-0zx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join Tweeter today." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZ1-cg-bh9">
                                 <rect key="frame" x="60" y="542" width="255" height="21"/>
