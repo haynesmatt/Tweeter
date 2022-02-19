@@ -24,25 +24,25 @@
                                     <color key="baseBackgroundColor" red="0.1139131561" green="0.63070619110000004" blue="0.94788545369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="See what's happening in the world right now." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jx4-wX-ODR">
-                                <rect key="frame" x="60" y="150" width="255" height="72"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join Twitter today." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZ1-cg-bh9">
-                                <rect key="frame" x="60" y="542.5" width="255" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join Tweeter today." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZ1-cg-bh9">
+                                <rect key="frame" x="60" y="542" width="255" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TwitterLogoBlue" translatesAutoresizingMaskIntoConstraints="NO" id="eV2-NZ-zJ9">
-                                <rect key="frame" x="41" y="49" width="105" height="105"/>
+                                <rect key="frame" x="41" y="39" width="105" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="105" id="Ga1-WI-ave"/>
                                     <constraint firstAttribute="height" constant="105" id="kv2-JP-vlg"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="See what's happening in the world right now." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jx4-wX-ODR">
+                                <rect key="frame" x="60" y="140" width="255" height="70"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lVK-ZK-cme"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -52,12 +52,12 @@
                             <constraint firstItem="BZ1-cg-bh9" firstAttribute="leading" secondItem="lVK-ZK-cme" secondAttribute="leading" constant="60" id="GdK-my-zNI"/>
                             <constraint firstItem="lqT-ww-NHw" firstAttribute="leading" secondItem="lVK-ZK-cme" secondAttribute="leading" constant="60" id="MfA-wa-lWL"/>
                             <constraint firstItem="jx4-wX-ODR" firstAttribute="leading" secondItem="lVK-ZK-cme" secondAttribute="leading" constant="60" id="P9j-8x-sjv"/>
-                            <constraint firstItem="jx4-wX-ODR" firstAttribute="top" secondItem="lVK-ZK-cme" secondAttribute="top" constant="150" id="RTf-No-zCu"/>
+                            <constraint firstItem="jx4-wX-ODR" firstAttribute="top" secondItem="lVK-ZK-cme" secondAttribute="top" constant="140" id="RTf-No-zCu"/>
                             <constraint firstItem="lVK-ZK-cme" firstAttribute="trailing" secondItem="BZ1-cg-bh9" secondAttribute="trailing" constant="60" id="VGu-v0-nWi"/>
                             <constraint firstItem="lqT-ww-NHw" firstAttribute="top" secondItem="BZ1-cg-bh9" secondAttribute="bottom" constant="15" id="VaV-AR-ggu"/>
                             <constraint firstItem="eV2-NZ-zJ9" firstAttribute="leading" secondItem="lVK-ZK-cme" secondAttribute="leading" constant="41" id="eE7-H7-rJs"/>
                             <constraint firstItem="lVK-ZK-cme" firstAttribute="trailing" secondItem="lqT-ww-NHw" secondAttribute="trailing" constant="60" id="iSf-Z1-STF"/>
-                            <constraint firstItem="eV2-NZ-zJ9" firstAttribute="top" secondItem="lVK-ZK-cme" secondAttribute="top" constant="49" id="uFv-iH-RXe"/>
+                            <constraint firstItem="eV2-NZ-zJ9" firstAttribute="top" secondItem="lVK-ZK-cme" secondAttribute="top" constant="39" id="uFv-iH-RXe"/>
                         </constraints>
                     </view>
                     <connections>
