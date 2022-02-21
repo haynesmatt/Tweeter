@@ -11,22 +11,23 @@ import UIKit
 class HomeTableViewController: UITableViewController {
     
     var tweetArray = [NSDictionary]()
-    var numberOfTweet: Int!
+    var numberOfTweets: Int!
     
     let myRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadTweet()
+        loadTweets()
 
-        myRefreshControl.addTarget(self, action: #selector(loadTweet), for: .valueChanged)
+        myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         tableView.refreshControl =  myRefreshControl
     }
     
-    @objc func loadTweet(){
+    @objc func loadTweets(){
         
+        numberOfTweets = 20
         let url = "https://api.twitter.com/1.1/statuses/home_timeline.json"
-        let params = ["count": 10]
+        let params = ["count": numberOfTweets]
 
         TwitterAPICaller.client?.getDictionariesRequest(url: url, parameters: params , success: { (tweets: [NSDictionary]) in
             
@@ -42,6 +43,30 @@ class HomeTableViewController: UITableViewController {
             print("Could not retrieve tweets! :(")
             print(Error.localizedDescription)
         })
+    }
+    
+    func loadMoreTweets(){
+        let url = "https://api.twitter.com/1.1/statuses/home_timeline.json"
+        numberOfTweets += 20
+        let params = ["count": numberOfTweets]
+        
+        TwitterAPICaller.client?.getDictionariesRequest(url: url, parameters: params, success: { (tweets: [NSDictionary]) in
+            
+            self.tweetArray.removeAll()
+            for tweet in tweets {
+                self.tweetArray.append(tweet)
+            }
+            self.tableView.reloadData()
+        }, failure: { (Error) in
+            print("Could not retrieve tweets! :(")
+            print(Error.localizedDescription)
+        })
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == tweetArray.count {
+            loadMoreTweets()
+        }
     }
     
     @IBAction func onLogout(_ sender: Any) {
