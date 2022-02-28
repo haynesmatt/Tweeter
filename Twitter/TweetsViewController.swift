@@ -1,5 +1,5 @@
 //
-//  TweetViewController.swift
+//  TweetsViewController.swift
 //  Twitter
 //
 //  Created by Matt Haynes on 2/27/22.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TweetViewController: UIViewController {
+class TweetsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,12 +16,15 @@ class TweetViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var tweetTextView: UITextView!
+    
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func tweet(_ sender: Any) {
     }
+    
     /*
     // MARK: - Navigation
 

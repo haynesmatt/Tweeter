@@ -166,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="2095.7943925233644" y="139.30885529157669"/>
         </scene>
-        <!--TweetViewController-->
+        <!--TweetsViewController-->
         <scene sceneID="Ks9-C5-N0u">
             <objects>
-                <viewController title="TweetViewController" id="qeY-44-J5l" customClass="TweetViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TweetsViewController" id="qeY-44-J5l" customClass="TweetsViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P53-Kc-p1v">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,17 +199,20 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancel" image="xmark" catalog="system" style="plain" id="kuc-IF-V1a">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="cancel:" destination="qeY-44-J5l" id="FBN-oR-jhx"/>
+                                <action selector="cancel:" destination="qeY-44-J5l" id="wRK-gC-Y0j"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tweet" style="plain" id="743-Bi-iZM">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="tweet:" destination="qeY-44-J5l" id="6tp-BR-VLT"/>
+                                <action selector="tweet:" destination="qeY-44-J5l" id="lLA-Ge-wpm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tweetTextView" destination="EFQ-Uh-owd" id="oHr-hm-rQh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Su3-v7-aq5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
