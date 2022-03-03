@@ -105,7 +105,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Tweet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtV-7v-tRE">
-                                            <rect key="frame" x="71" y="34" width="337" height="75"/>
+                                            <rect key="frame" x="71" y="34" width="337" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -116,18 +116,46 @@
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXB-oz-D9O" userLabel="Like">
+                                            <rect key="frame" x="79" y="79.333333333333258" width="10" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="16" id="2Xs-7n-kBC"/>
+                                                <constraint firstAttribute="width" constant="10" id="K8v-dT-ckC"/>
+                                                <constraint firstAttribute="height" constant="16" id="VCU-gI-DOC"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="rfz-c1-DFz"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title=" ">
+                                                <color key="baseForegroundColor" systemColor="systemGrayColor"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-l3-qBR">
+                                            <rect key="frame" x="147" y="70.333333333333329" width="10" height="33.666666666666671"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="8je-OL-g1o"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="10" id="EnY-MO-EKB"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="repeat.circle" catalog="system" title=" ">
+                                                <color key="baseForegroundColor" systemColor="systemGrayColor"/>
+                                            </buttonConfiguration>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="HtV-7v-tRE" firstAttribute="leading" secondItem="beA-jF-GXY" secondAttribute="trailing" constant="8" id="040-hj-8FY"/>
+                                        <constraint firstItem="WXB-oz-D9O" firstAttribute="leading" secondItem="69h-2K-Cog" secondAttribute="leadingMargin" constant="58" id="30T-Fu-NsF"/>
                                         <constraint firstItem="KqR-lo-dd6" firstAttribute="top" secondItem="69h-2K-Cog" secondAttribute="top" constant="8" id="Cff-ow-fHq"/>
+                                        <constraint firstItem="x7N-l3-qBR" firstAttribute="top" secondItem="HtV-7v-tRE" secondAttribute="bottom" constant="16" id="Iqr-n4-nCV"/>
                                         <constraint firstItem="beA-jF-GXY" firstAttribute="leading" secondItem="69h-2K-Cog" secondAttribute="leading" constant="8" id="Itb-14-RuV"/>
                                         <constraint firstItem="KqR-lo-dd6" firstAttribute="leading" secondItem="beA-jF-GXY" secondAttribute="trailing" constant="8" id="J8S-hq-27E"/>
                                         <constraint firstItem="E6P-br-bfm" firstAttribute="top" secondItem="69h-2K-Cog" secondAttribute="top" constant="9" id="Nsu-dT-alG"/>
+                                        <constraint firstAttribute="bottom" secondItem="x7N-l3-qBR" secondAttribute="bottom" constant="16" id="Q0r-XU-VAd"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KqR-lo-dd6" secondAttribute="trailing" constant="20" symbolic="YES" id="RqS-ec-uEw"/>
                                         <constraint firstItem="KqR-lo-dd6" firstAttribute="leading" secondItem="beA-jF-GXY" secondAttribute="trailing" constant="8" symbolic="YES" id="Rrp-cy-G5X"/>
                                         <constraint firstItem="beA-jF-GXY" firstAttribute="top" secondItem="69h-2K-Cog" secondAttribute="top" constant="8" id="SXp-b2-PT9"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="HtV-7v-tRE" secondAttribute="bottom" id="d2M-IG-USh"/>
+                                        <constraint firstItem="x7N-l3-qBR" firstAttribute="centerY" secondItem="WXB-oz-D9O" secondAttribute="centerY" id="fbA-KA-nAH"/>
                                         <constraint firstItem="HtV-7v-tRE" firstAttribute="top" secondItem="KqR-lo-dd6" secondAttribute="bottom" constant="4" id="goD-Cu-bNd"/>
+                                        <constraint firstItem="x7N-l3-qBR" firstAttribute="leading" secondItem="WXB-oz-D9O" secondAttribute="trailing" constant="59" id="iYV-j3-a4B"/>
                                         <constraint firstItem="HtV-7v-tRE" firstAttribute="trailing" secondItem="69h-2K-Cog" secondAttribute="trailingMargin" id="l3o-qx-U3e"/>
                                         <constraint firstItem="E6P-br-bfm" firstAttribute="leading" secondItem="KqR-lo-dd6" secondAttribute="trailing" constant="8" id="uga-wr-574"/>
                                     </constraints>
@@ -267,7 +295,9 @@
     </scenes>
     <resources>
         <image name="TwitterLogoBlue" width="133.33332824707031" height="133.33332824707031"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
+        <image name="repeat.circle" catalog="system" width="128" height="121"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
@@ -278,6 +308,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
