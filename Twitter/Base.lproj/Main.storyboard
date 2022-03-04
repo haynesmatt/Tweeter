@@ -128,6 +128,9 @@
                                             <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title=" ">
                                                 <color key="baseForegroundColor" systemColor="systemGrayColor"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="favoriteTweet:" destination="AZe-6M-TZy" eventType="touchUpInside" id="9Is-2U-DS2"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-l3-qBR">
                                             <rect key="frame" x="147" y="70.333333333333329" width="10" height="33.666666666666671"/>
@@ -139,6 +142,9 @@
                                             <buttonConfiguration key="configuration" style="plain" image="repeat.circle" catalog="system" title=" ">
                                                 <color key="baseForegroundColor" systemColor="systemGrayColor"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="retweet:" destination="AZe-6M-TZy" eventType="touchUpInside" id="qpl-ty-hOT"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -161,7 +167,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="likeButton" destination="WXB-oz-D9O" id="dyN-Fb-Mhr"/>
                                     <outlet property="profileImageView" destination="beA-jF-GXY" id="eXh-VY-Xd1"/>
+                                    <outlet property="retweetButton" destination="x7N-l3-qBR" id="ljN-rZ-vje"/>
                                     <outlet property="screenNameLabel" destination="E6P-br-bfm" id="Lub-Yy-LYn"/>
                                     <outlet property="tweetContent" destination="HtV-7v-tRE" id="Etx-09-pMk"/>
                                     <outlet property="usernameLabel" destination="KqR-lo-dd6" id="Uj7-md-TmZ"/>

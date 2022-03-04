@@ -99,6 +99,9 @@ class HomeTableViewController: UITableViewController {
             cell.profileImageView.layer.cornerRadius = cell.profileImageView.bounds.width / 2
         }
         
+        cell.setFavorite(tweetArray[indexPath.row]["favorited"] as! Bool )
+        cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
+        
         return cell
     }
     

@@ -15,6 +15,41 @@ class TweetTableViewCell: UITableViewCell {
     @IBOutlet weak var tweetContent: UILabel!
     @IBOutlet weak var screenNameLabel: UILabel!
     
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var retweetButton: UIButton!
+    
+    var favorited: Bool = false
+    var tweetId: Int = -1
+    
+    @IBAction func favoriteTweet(_ sender: Any) {
+        let tobeFavorited = !favorited
+        if (tobeFavorited) {
+            TwitterAPICaller.client?.likeTweet(tweetId: tweetId, success: {
+                self.setFavorite(true)
+            }, failure: { (error) in
+                print("Favorite did not succeed: \(error)")
+            })
+        } else {
+            TwitterAPICaller.client?.unlikeTweet(tweetId: tweetId, success: {
+                self.setFavorite(false)
+            }, failure: { (error) in
+                print("Unfavorite did not succeed: \(error)")
+            })
+        }
+    }
+    @IBAction func retweet(_ sender: Any) {
+    }
+    
+    
+    func setFavorite(_ isFavorited: Bool) {
+        favorited = isFavorited
+        if (favorited) {
+            likeButton.setImage(UIImage(named: "favor-icon-red"), for: UIControl.State.normal)
+        }
+        else {
+            likeButton.setImage(UIImage(named: "favor-icon"), for: UIControl.State.normal)
+        }
+    }
     
     
     override func awakeFromNib() {
